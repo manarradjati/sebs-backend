@@ -5,6 +5,7 @@ use App\Http\Controllers\OrganizerController;
 
 Route::middleware('api')->group(function () {
     Route::apiResource('organizers', OrganizerController::class);
+    
 });
 
 

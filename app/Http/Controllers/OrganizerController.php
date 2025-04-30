@@ -43,7 +43,8 @@ class OrganizerController extends Controller
             return response()->json([
                 'toastmessage' => $this->messages['retrieve_failure'],
                 'error' => $this->messages['unexpected_error'],
-                'exception' => $e->getMessage()
+                'exception' => $e->getMessage(),
+                'trace' => $e->getTrace(),
             ], 500);
         }
     }
@@ -59,7 +60,8 @@ class OrganizerController extends Controller
             return response()->json([
                 'toastmessage' => $this->messages['create_failure'],
                 'error' => $this->messages['unexpected_error'],
-                'exception' => $e->getMessage()
+                'exception' => $e->getMessage(),
+                'trace' => $e->getTrace(),
             ], 500);
         }
     }
@@ -75,7 +77,8 @@ class OrganizerController extends Controller
             return response()->json([
                 'toastmessage' => $this->messages['show_failure'],
                 'error' => $this->messages['unexpected_error'],
-                'exception' => $e->getMessage()
+                'exception' => $e->getMessage(),
+                'trace' => $e->getTrace(),
             ], 500);
         }
     }
@@ -91,7 +94,8 @@ class OrganizerController extends Controller
             return response()->json([
                 'toastmessage' => $this->messages['update_failure'],
                 'error' => $this->messages['unexpected_error'],
-                'exception' => $e->getMessage()
+                'exception' => $e->getMessage(),
+                'trace' => $e->getTrace(),
             ], 500);
         }
     }
@@ -114,7 +118,8 @@ class OrganizerController extends Controller
             return response()->json([
                 'toastmessage' => $this->messages['delete_failure'],
                 'error' => $this->messages['unexpected_error'],
-                'exception' => $e->getMessage()
+                'exception' => $e->getMessage(),
+                'trace' => $e->getTrace(),
             ], 500);
         }
     }
