@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Organizer extends Model
 {
-    protected $connection = 'mongodb'; // optional if using MongoDB
+    // protected $connection = 'mongodb'; // optional if using MongoDB
     protected $collection = 'organizers'; // specify collection if needed
     use HasFactory;
 
