@@ -1,7 +1,7 @@
  <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useStore } from 'vuex'
-import { useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 import logo_cutted from '@images/logo-cutted.png'
 
 // 🖼️ Background images

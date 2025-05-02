@@ -15,7 +15,7 @@
       }"
     />
 
-    <div v-if="userdata && userdata.type === 'admin'">
+    <div v-if="userdata || userdata.type === 'admin'">
       <!-- 👉 Quick Access -->
       <NavBarSectionTitle
         :item="{

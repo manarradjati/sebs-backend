@@ -8,7 +8,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\AuthController;
-
+ 
 Route::group(['middleware' => 'auth:api'], function(){
     Route::apiResource('organizers', OrganizerController::class);
     Route::apiResource('categories', CategoryController::class);

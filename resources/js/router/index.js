@@ -62,6 +62,14 @@ const router = createRouter({
           path: 'orders',
           component: () => import('../views/Bookify/orders/list.vue'),
         },
+
+        // { path: '/home', name: 'Home', component: Home },
+        // { path: '/events/:id', name: 'EventDetails', component: EventDetails, props: true },
+        // { path: '/login', name: 'Login', component: Login },
+        // { path: '/register', name: 'Register', component: Register },
+        // { path: '/admin', name: 'AdminPanel', component: AdminPanel }
+
+        
         {
           path: 'dashboard-example',
           component: () => import('../views/Bookify/dashboard.vue'),
