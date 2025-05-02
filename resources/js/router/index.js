@@ -62,6 +62,10 @@ const router = createRouter({
           path: 'orders',
           component: () => import('../views/Bookify/orders/list.vue'),
         },
+        {
+          path: 'events',
+          component: () => import('../views/Bookify/events/list.vue'),
+        },
 
         // { path: '/home', name: 'Home', component: Home },
         // { path: '/events/:id', name: 'EventDetails', component: EventDetails, props: true },

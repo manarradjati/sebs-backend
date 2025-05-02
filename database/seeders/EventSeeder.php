@@ -15,8 +15,8 @@ class EventSeeder extends Seeder
         $category = Category::first();   // نجيبو أول تصنيف
 
         Event::create([
-            'organizer_id' => $organizer->id,
-            'category_id' => $category->id,
+            'organizer_id' => 1,
+            'category_id' => 1,
             'title' => 'تظاهرة رياضية كبرى',
             'description' => 'وصف بسيط للتظاهرة الرياضية.',
             'tags' => ['رياضة', 'ترفيه'],

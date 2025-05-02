@@ -5,7 +5,7 @@
     @submit.prevent="submit()"
     v-model="valid"
   >
-    <VCardText> Add Book</VCardText>
+    <VCardText> update Book</VCardText>
     <VRow>
     <!-- Title -->
     <VCol md="6" cols="12">

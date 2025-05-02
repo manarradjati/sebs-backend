@@ -25,6 +25,14 @@
 
       <NavBarLink
         :item="{
+          title: 'Events',
+          icon: 'carbon:event',
+          to: '/events',
+        }"
+      />
+
+      <NavBarLink
+        :item="{
           title: 'Books',
           icon: 'bx-book',
           to: '/books',

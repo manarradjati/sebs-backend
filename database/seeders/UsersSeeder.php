@@ -16,6 +16,7 @@ class UsersSeeder extends Seeder
         $users = [
             [
                 'username' => 'khaled',
+                'name' => 'khaled',
                 'email' => 'khaled.admin@example.com',
                 'phone' => '0600000001',
                 'address' => json_encode(['city' => 'Casablanca', 'street' => 'Main St']),
@@ -25,6 +26,7 @@ class UsersSeeder extends Seeder
             ],
             [
                 'username' => 'mohammed',
+                'name' => 'mohammed',
                 'email' => 'mohammed.branch@example.com',
                 'phone' => '0600000002',
                 'address' => json_encode(['city' => 'Rabat', 'street' => 'Second St']),
@@ -34,6 +36,7 @@ class UsersSeeder extends Seeder
             ],
             [
                 'username' => 'ali',
+                'name' => 'ali',
                 'email' => 'ali.imam@example.com',
                 'phone' => '0600000003',
                 'address' => json_encode(['city' => 'Fes', 'street' => 'Third St']),
@@ -43,6 +46,7 @@ class UsersSeeder extends Seeder
             ],
             [
                 'username' => 'asem',
+                'name' => 'asem',
                 'email' => 'asem.quran@example.com',
                 'phone' => '0600000004',
                 'address' => json_encode(['city' => 'Marrakech', 'street' => 'Fourth St']),

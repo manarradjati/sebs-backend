@@ -32,7 +32,7 @@ class EventController extends Controller
     public function index()
     {
         try {
-            $events = Event::with(['organizer', 'category'])->get();
+            $events = Event::with(['organizer.user', 'category'])->get();
             return response()->json([
                 'toastmessage' => $this->messages['retrieve_success'],
                 'data' => $events
