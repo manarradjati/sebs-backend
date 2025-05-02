@@ -2,7 +2,7 @@
 import VueApexCharts from 'vue3-apexcharts'
 import { useTheme } from 'vuetify'
 import { hexToRgb } from '@/others/utils'
-
+import { computed } from 'vue'
 const vuetifyTheme = useTheme()
 
 const series = [{

@@ -5,7 +5,7 @@ import {
   useTheme,
 } from 'vuetify'
 import { hexToRgb } from '@/others/utils'
-
+import { computed } from 'vue'
 const vuetifyTheme = useTheme()
 const display = useDisplay()
 

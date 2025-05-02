@@ -1,4 +1,5 @@
-<script setup>
+ <script setup>
+import { computed } from 'vue'
 import { useTheme } from 'vuetify'
 import illustrationJohnDark from '@images/cards/illustration-john-dark.png'
 import illustrationJohnLight from '@images/cards/illustration-john-light.png'
@@ -6,6 +7,7 @@ import illustrationJohnLight from '@images/cards/illustration-john-light.png'
 const { global } = useTheme()
 const illustrationJohn = computed(() => global.name.value === 'dark' ? illustrationJohnDark : illustrationJohnLight)
 </script>
+
 
 <template>
   <VCard class="text-center text-sm-start">

@@ -1,11 +1,21 @@
 <script>
 import { useDisplay } from 'vuetify'
 import NavBar from '@/views/Bookify/layout/elements/NavBar/NavBar.vue'
+import { defineComponent, h } from 'vue'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { syncRef, useToggle } from '@vueuse/core'
+
 
 export default defineComponent({
   setup(props, { slots }) {
     const isOverlayNavActive = ref(false)
     const isLayoutOverlayVisible = ref(false)
+
+    // watch(isOverlayNavActive, (newVal) => {
+    //   isLayoutOverlayVisible.value = newVal
+    // })
+
     const toggleIsOverlayNavActive = useToggle(isOverlayNavActive)
     const route = useRoute()
     const { mdAndDown } = useDisplay()

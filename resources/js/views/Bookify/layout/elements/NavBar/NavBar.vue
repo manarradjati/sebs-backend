@@ -1,15 +1,15 @@
-<script setup>
+ <script setup>
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
 import { useDisplay } from 'vuetify'
 import logo from '@images/logo.svg?raw'
 import logo_cutted from '@images/logo-cutted.png'
+import { ref, watch } from 'vue'; 
+import { useRoute } from 'vue-router'
+import { throttle } from 'lodash-es' 
 
 const props = defineProps({
   tag: {
-    type: [
-      String,
-      null,
-    ],
+    type: [String, null],
     required: false,
     default: 'aside',
   },
@@ -34,9 +34,10 @@ watch(() => route.path, () => {
 const isVerticalNavScrolled = ref(false)
 const updateIsVerticalNavScrolled = val => isVerticalNavScrolled.value = val
 
-const handleNavScroll = evt => {
+const handleNavScroll = throttle(evt => {
   isVerticalNavScrolled.value = evt.target.scrollTop > 0
-};
+}, 200)  // إضافة تأخير للتقليل من عمليات التحديث
+
 </script>
 
 <template>
@@ -46,7 +47,7 @@ const handleNavScroll = evt => {
     class="layout-vertical-nav"
     :class="[
       {
-        'visible': isOverlayNavActive,
+        'visible': props.isOverlayNavActive,
         'scrolled': isVerticalNavScrolled,
         'overlay-nav': mdAndDown,
       },
@@ -60,10 +61,7 @@ const handleNavScroll = evt => {
           class="app-logo d-flex align-center gap-x-3 app-title-wrapper"
         >
           <img :src="logo_cutted" width="30" height="40">
-          <!-- make text bold using bootstrap -->
-          <h1 class="leading-normal" style="font-weight: bold;">
-            Bookify
-          </h1>
+          <h1 class="leading-normal" style="font-weight: bold;">Bookify</h1>
         </RouterLink>
       </slot>
     </div>
@@ -92,7 +90,6 @@ const handleNavScroll = evt => {
 @use "@configured-variables" as variables;
 @use "@/assets/layouts/styles/mixins";
 
-// 👉 Vertical Nav
 .layout-vertical-nav {
   position: fixed;
   z-index: variables.$layout-vertical-nav-z-index;
@@ -142,12 +139,10 @@ const handleNavScroll = evt => {
     }
   }
 
-  // 👉 Overlay nav
   &.overlay-nav {
     &:not(.visible) {
       display: flex;
       transition: display 2s;
-
       transform: translateX(-#{variables.$layout-vertical-nav-width});
 
       @include mixins.rtl {

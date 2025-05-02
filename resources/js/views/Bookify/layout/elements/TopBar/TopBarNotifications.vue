@@ -75,7 +75,7 @@ export default{
         <!-- 👉 User Avatar & Name -->
         <VListItem>
           <!-- Left side: Title -->
-          <VListItemTitle class="font-weight-semibold" style="font-weight: bold; font-size=30px;">
+          <VListItemTitle class="font-weight-semibold" style="font-weight: bold; font-size:30px;">
             Notifications
           </VListItemTitle>
 

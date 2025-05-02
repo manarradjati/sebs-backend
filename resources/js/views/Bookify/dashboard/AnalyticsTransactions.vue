@@ -4,7 +4,7 @@ import creditCardSuccess from '@images/cards/credit-card-success.png'
 import creditCardWarning from '@images/cards/credit-card-warning.png'
 import paypalError from '@images/cards/paypal-error.png'
 import walletPrimary from '@images/cards/wallet-primary.png'
-
+import { computed } from 'vue'
 const transactions = [
   {
     amount: +82.6,

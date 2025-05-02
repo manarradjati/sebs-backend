@@ -1,10 +1,10 @@
 <script setup>
-import AnalyticsCongratulations from '@/views/v-pages/dashboard/AnalyticsCongratulations.vue'
-import AnalyticsFinanceTabs from '@/views/v-pages/dashboard/AnalyticsFinanceTab.vue'
-import AnalyticsOrderStatistics from '@/views/v-pages/dashboard/AnalyticsOrderStatistics.vue'
-import AnalyticsProfitReport from '@/views/v-pages/dashboard/AnalyticsProfitReport.vue'
-import AnalyticsTotalRevenue from '@/views/v-pages/dashboard/AnalyticsTotalRevenue.vue'
-import AnalyticsTransactions from '@/views/v-pages/dashboard/AnalyticsTransactions.vue'
+import AnalyticsCongratulations from '@/views/Bookify/dashboard/AnalyticsCongratulations.vue'
+import AnalyticsFinanceTabs from '@/views/Bookify/dashboard/AnalyticsFinanceTab.vue'
+import AnalyticsOrderStatistics from '@/views/Bookify/dashboard/AnalyticsOrderStatistics.vue'
+import AnalyticsProfitReport from '@/views/Bookify/dashboard/AnalyticsProfitReport.vue'
+import AnalyticsTotalRevenue from '@/views/Bookify/dashboard/AnalyticsTotalRevenue.vue'
+import AnalyticsTransactions from '@/views/Bookify/dashboard/AnalyticsTransactions.vue'
 
 // 👉 Images
 import chart from '@images/cards/chart-success.png'
