@@ -33,7 +33,7 @@ const userdata=store.state.data.user;
       color="primary"
       variant="tonal"
     >
-      <VImg :src="avatar" />
+      <VImg :src="avatar1" />
 
       <!-- SECTION Menu -->
       <VMenu
@@ -58,7 +58,7 @@ const userdata=store.state.data.user;
                     color="primary"
                     variant="tonal"
                   >
-                    <VImg :src="avatar" />
+                    <VImg :src="avatar1" />
                   </VAvatar>
                 </VBadge>
               </VListItemAction>

@@ -3,12 +3,21 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import logo_cutted from '@images/logo-cutted.png'
+import bg1 from '@images/backgrounds/bg1.webp'
+import bg2 from '@images/backgrounds/bg2.jpg'
+import bg3 from '@images/backgrounds/bg3.jpg'
+import bg4 from '@images/backgrounds/bg4.jpg'
+
 
 // 🖼️ Background images
 const backgroundImages = [
-  "https://i.pinimg.com/736x/c8/b0/7e/c8b07e380215edaaa1903769586a61dc.jpg",
-  "https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-an-empty-bookshop-stacked-with-books-image_2924924.jpg",
-  "https://wallpapercave.com/wp/wp10175933.jpg",
+  // "https://i.pinimg.com/736x/c8/b0/7e/c8b07e380215edaaa1903769586a61dc.jpg",
+  // "https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-an-empty-bookshop-stacked-with-books-image_2924924.jpg",
+  // "https://wallpapercave.com/wp/wp10175933.jpg",
+  bg1,
+  bg2,
+  bg3,
+  bg4
 ]
 const currentBackgroundIndex = ref(0)
 const transitionDuration = 5000
@@ -114,6 +123,11 @@ const isPasswordVisible = ref(false)
 
                 <VBtn block type="submit">Log in</VBtn>
               </VCol>
+              <VCol cols="12" class="text-center text-base">
+                <span>Don't have an account?</span>
+                <RouterLink class="text-primary ms-2" to="/register">Sign up</RouterLink>
+              </VCol>
+
             </VRow>
           </VForm>
         </VCardText>

@@ -34,7 +34,7 @@ class OrganizerController extends Controller
     public function index()
     {
         try {
-            $organizers = Organizer::all();
+            $organizers = Organizer::with(['user'])->get();
             return response()->json([
                 'toastmessage' => $this->messages['retrieve_success'],
                 'data' => $organizers

@@ -46,25 +46,34 @@ const router = createRouter({
           path: 'account-settings',
           component: () => import('../views/Bookify/account/account-settings.vue'),
         },
-        {
-          path: 'books',
-          component: () => import('../views/Bookify/books/list.vue'),
-        },
-        {
-          path: 'genres',
-          component: () => import('../views/Bookify/genres/list.vue'),
-        },
-        {
-          path: 'authors',
-          component: () => import('../views/Bookify/authors/list.vue'),
-        },
-        {
-          path: 'orders',
-          component: () => import('../views/Bookify/orders/list.vue'),
-        },
+
         {
           path: 'events',
           component: () => import('../views/Bookify/events/list.vue'),
+        },
+        {
+          path: 'categories',
+          component: () => import('../views/Bookify/categories/list.vue'),
+        },
+        {
+          path: 'organizers',
+          component: () => import('../views/Bookify/organizers/list.vue'),
+        },
+        {
+          path: 'users',
+          component: () => import('../views/Bookify/users/list.vue'),
+        },
+        {
+          path: 'tickets',
+          component: () => import('../views/Bookify/tickets/list.vue'),
+        },
+        {
+          path: 'reviews',
+          component: () => import('../views/Bookify/reviews/list.vue'),
+        },
+        {
+          path: 'bookings',
+          component: () => import('../views/Bookify/bookings/list.vue'),
         },
 
         // { path: '/home', name: 'Home', component: Home },
@@ -101,15 +110,7 @@ const router = createRouter({
       ],
     },
 
-    // صفحات مستقلة
-    {
-      path: '/profile/:username',
-      component: () => import('../views/Others/Profile.vue'),
-    },
-    {
-      path: '/:pathMatch(.*)*',
-      component: () => import('../views/Others/404Error.vue'),
-    },
+     
   ],
 });
 

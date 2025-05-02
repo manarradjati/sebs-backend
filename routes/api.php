@@ -8,6 +8,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TicketController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
  
 Route::group(['middleware' => 'auth:api'], function(){
     Route::apiResource('organizers', OrganizerController::class);
@@ -16,6 +17,8 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::apiResource('bookings', BookingController::class);
     Route::apiResource('tickets', TicketController::class);
     Route::apiResource('reviews', ReviewController::class);
+
+    Route::apiResource('users', UserController::class);
     
     Route::post('logout', [AuthController::class, 'logout']);   // User logout
     Route::get('user', [AuthController::class, 'userInfo']);  // Get user info

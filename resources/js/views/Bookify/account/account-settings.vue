@@ -6,6 +6,7 @@ import AccountProfile from '@/views/Bookify/account/account-components/AccountPr
 
 import AccountActions from '@/views/Bookify/account/account-components/AccountActions.vue'
 import AccountSettingsNotification from '@/views/Bookify/account/account-components/AccountSettingsNotification.vue'
+import { ref } from 'vue'
 
 
 const route = useRoute()

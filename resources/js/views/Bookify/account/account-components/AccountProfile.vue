@@ -9,7 +9,7 @@ import avatar6 from '@images/avatars/avatar-6.png'
 import avatar7 from '@images/avatars/avatar-7.png'
 
 import pages1 from '@images/pages/1.png'
-import background from '@images/backgrounds/background2.jpg'
+import background from '@images/backgrounds/bg2.jpg'
 
 export default {
   data() {
