@@ -18,7 +18,7 @@ class Booking extends Model
     ];
 
     protected $casts = [
-        'total_price' => 'decimal',
+        'total_price' => 'decimal:2',
     ];
 
     public function user()

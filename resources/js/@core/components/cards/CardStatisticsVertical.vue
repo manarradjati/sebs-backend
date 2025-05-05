@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   title: {
     type: String,
@@ -18,7 +20,7 @@ const props = defineProps({
   },
 })
 
-const isPositive = controlledComputed(() => props.change, () => Math.sign(props.change) === 1)
+const isPositive = computed(() => props.change, () => Math.sign(props.change) === 1)
 </script>
 
 <template>

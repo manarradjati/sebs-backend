@@ -1,7 +1,15 @@
-<template>
+<template> 
   <VForm ref="refForm" class="mt-6" @submit.prevent="submit" v-model="valid">
     <VCardText>Add Item</VCardText>
     <VRow>
+      <!-- Example Events -->
+      <VCol cols="12">
+        <VCardText class="mb-2">Example Events</VCardText>
+        <VBtn class="me-2" @click="fillExample(1)">Concert</VBtn>
+        <VBtn class="me-2" @click="fillExample(2)">Conference</VBtn>
+        <VBtn @click="fillExample(3)">Festival</VBtn>
+      </VCol>
+
       <!-- Item Name -->
       <VCol md="6" cols="12">
         <VTextField
@@ -108,6 +116,29 @@ export default {
           this.types = res.data;
         })
         .catch(err => console.error(err));
+    },
+    fillExample(type) {
+      const examples = {
+        1: {
+          name: 'Live Concert Ticket',
+          type_id: this.types[0]?.id || null,
+          price: '100',
+          stock: '150',
+        },
+        2: {
+          name: 'Tech Conference Access',
+          type_id: this.types[1]?.id || this.types[0]?.id || null,
+          price: '200',
+          stock: '300',
+        },
+        3: {
+          name: 'Summer Festival Pass',
+          type_id: this.types[2]?.id || this.types[0]?.id || null,
+          price: '75',
+          stock: '500',
+        },
+      };
+      this.form = { ...examples[type] };
     },
   },
   created() {

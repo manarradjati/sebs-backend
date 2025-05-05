@@ -25,20 +25,19 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::post('change-password', [AuthController::class, 'changePassword']);  // Change password
 });
 
-Route::get('/user', function (Request $request) {return $request->user();})->middleware('auth:sanctum');
-Route::post('register', [AuthController::class, 'register']); // User registration
-Route::post('login', [AuthController::class, 'login']);
+// Route::get('/user', function (Request $request) {return $request->user();})->middleware('auth:sanctum');
+Route::post('/register', [AuthController::class, 'register']); // User registration
+Route::post('/login', [AuthController::class, 'login']);
 
 
 
 // use App\Models\Category;
 
-// Route::get('/categories', function () {
-//     $categories = Category::all();
-//     return response()->json($categories); // إرجاع الفئات على شكل JSON
-// });
+ //Route::get('/categories', function () {$categories = Category::all();return response()->json($categories); // إرجاع الفئات على شكل JSON
+ //});
  
 
+ Route::get('/tickets/download-pdf', [TicketController::class, 'downloadPdf'])->middleware('auth:api');
 
 
 

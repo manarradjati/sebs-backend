@@ -18,6 +18,8 @@ return new class extends Migration
             $table->integer('count')->unsigned()->default(1);
             $table->decimal('total_price', 8, 2);
             $table->enum('status', ['pending', 'confirmed', 'cancelled'])->default('pending');
+            $table->string('payment_method')->nullable(); // إضافة عمود payment_method
+            $table->enum('payment_status', ['pending', 'paid', 'failed'])->default('pending'); // إضافة عمود payment_status
             $table->timestamps();
         });
     }

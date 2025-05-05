@@ -7,7 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CardStatisticsHorizontal: typeof import('./resources/js/@core/components/cards/CardStatisticsHorizontal.vue')['default']
+    CardStatisticsVertical: typeof import('./resources/js/@core/components/cards/CardStatisticsVertical.vue')['default']
+    CardStatisticsWithImages: typeof import('./resources/js/@core/components/cards/CardStatisticsWithImages.vue')['default']
+    MoreBtn: typeof import('./resources/js/@core/components/MoreBtn.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeSwitcher: typeof import('./resources/js/@core/components/ThemeSwitcher.vue')['default']
   }
 }

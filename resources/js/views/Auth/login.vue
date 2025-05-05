@@ -78,13 +78,13 @@ const isPasswordVisible = ref(false)
           <template #prepend>
             <img :src="logo_cutted" width="30" height="50" />
           </template>
-          <VCardTitle class="text-2xl font-weight-bold">Bookify</VCardTitle>
+          <VCardTitle class="text-2xl font-weight-bold">Event_Booking</VCardTitle>
         </VCardItem>
 
         <VDivider />
 
         <VCardItem class="justify-center">
-          <VCardTitle>👋🏻 Hello in the Books Store Platform</VCardTitle>
+          <VCardTitle>👋🏻 Hello in the  Event_Booking Platform</VCardTitle>
         </VCardItem>
 
         <VCardText>

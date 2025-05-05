@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ticket;
+use Barryvdh\DomPDF\Facade as PDF;
 use App\Http\Requests\TicketRequest;
 use Exception;
 
@@ -25,7 +26,9 @@ class TicketController extends Controller
             'delete_failure'   => 'Failed to delete ticket.',
             'unexpected_error' => 'An unexpected error occurred.',
             'unexpected_error_query' => 'A database query error occurred.',
-            'delete_failure_query' => 'Ticket cannot be deleted due to related data.'
+            'delete_failure_query' => 'Ticket cannot be deleted due to related data.',
+            'pdf_generated_success' => 'PDF generated successfully.',
+            'pdf_generated_failure' => 'Failed to generate PDF.'
         ];
     }
 
@@ -111,6 +114,34 @@ class TicketController extends Controller
         } catch (Exception $e) {
             return response()->json([
                 'toastmessage' => $this->messages['delete_failure'],
+                'error' => $this->messages['unexpected_error'],
+                'exception' => $e->getMessage()
+            ], 500);
+        }
+    }
+
+
+        // باقي دوال الـ Controller هنا ...
+
+    /**
+     * تحميل التذاكر بتنسيق PDF.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function downloadPdf()
+    {
+        try {
+            // جلب التذاكر مع تفاصيل الحجز
+            $tickets = Ticket::with('booking')->get();
+
+            // تحميل ملف PDF باستخدام الـ View
+            $pdf = PDF::loadView('tickets.pdf', compact('tickets'));
+
+            // تحميل الملف كـ PDF
+            return $pdf->download('tickets.pdf');
+        } catch (\Throwable $e) {
+            return response()->json([
+                'toastmessage' => $this->messages['pdf_generated_failure'],
                 'error' => $this->messages['unexpected_error'],
                 'exception' => $e->getMessage()
             ], 500);

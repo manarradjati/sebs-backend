@@ -1,5 +1,7 @@
 <script setup>
 import { useTheme } from 'vuetify'
+import { useCycleList } from '@vueuse/core'
+import { watch } from 'vue'
 
 const props = defineProps({
   themes: {

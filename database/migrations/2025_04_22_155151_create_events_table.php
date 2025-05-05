@@ -22,7 +22,8 @@ return new class extends Migration
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->decimal('price', 8, 2);
-            $table->enum('status', ['upcoming', 'ongoing', 'completed'])->default('upcoming');
+            $table->enum('status', ['upcoming', 'ongoing', 'completed'])->default('upcoming')->index(); // فهرسة الـ status
+
             $table->boolean('is_approved')->default(false);
             $table->timestamps();
         });

@@ -41,10 +41,12 @@ class BookingController extends Controller
             return response()->json([
                 'toastmessage' => $this->messages['retrieve_failure'],
                 'error' => $this->messages['unexpected_error'],
-                'exception' => $e->getMessage()
+                'exception' => $e->getMessage(),
+                // 'trace' => $e->getTrace()
             ], 500);
         }
     }
+
 
     public function store(BookingRequest $request)
     {

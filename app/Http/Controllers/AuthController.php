@@ -127,6 +127,11 @@ class AuthController extends Controller
                     'name' => 'required|string|max:255',
                     'email' => 'required|email|unique:users,email',
                     'password' => 'required|string|min:8',
+                    'username' => 'required|string|max:255|unique:users,username',
+                    'is_banned' => 'boolean',
+                    'address' => 'nullable|string|max:500',
+                    'age' => 'nullable|integer|min:0',
+                    'phone' => 'nullable|string|max:20',
                ]);
 
                $validated['password'] = Hash::make($validated['password']);
@@ -148,22 +153,22 @@ class AuthController extends Controller
                ], 500);
           }
      }
-
+     
      public function userInfo(Request $request)
      {
-     try {
-          $user = JWTAuth::user();
+          try {
+               $user = JWTAuth::user();
 
-          return response()->json([
-               'toastmessage' => $this->messages['user_info_success'],
-               'user' => $user,
-          ], 200);
-     } catch (\Throwable $e) {
-          return response()->json([
-               'toastmessage' => $this->messages['user_info_failure'],
-               'error' => $this->messages['unexpected_error'],
-               'exception' => $e->getMessage(),
-          ], 500);
+               return response()->json([
+                    'toastmessage' => $this->messages['user_info_success'],
+                    'user' => $user,
+               ], 200);
+          } catch (\Throwable $e) {
+               return response()->json([
+                    'toastmessage' => $this->messages['user_info_failure'],
+                    'error' => $this->messages['unexpected_error'],
+                    'exception' => $e->getMessage(),
+               ], 500);
           }
      }
 

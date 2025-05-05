@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('organizers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->string('company_name');
+            $table->string('company_name', 255)->unique();
             $table->text('bio')->nullable();
             $table->string('website')->nullable();
             $table->timestamps();

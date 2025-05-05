@@ -33,6 +33,7 @@ class ReviewController extends Controller
     {
         try {
             $reviews = Review::with('booking')->get();
+            // $reviews = Review::all(); // No relationship eager-loading
             return response()->json([
                 'toastmessage' => $this->messages['retrieve_success'],
                 'data' => $reviews

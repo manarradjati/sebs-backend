@@ -24,3 +24,4 @@ Route::get('/{any}', function() {
 //     $categories = Category::all();
 //     return response()->json($categories); // إرجاع الفئات على شكل JSON
 // });
+ 
