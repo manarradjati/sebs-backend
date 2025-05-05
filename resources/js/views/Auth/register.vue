@@ -71,7 +71,7 @@ const register = async () => {
           <template #prepend>
             <img :src="logo_cutted" width="30" height="50" />
           </template>
-          <VCardTitle class="text-2xl font-weight-bold"> Event_Booking</VCardTitle>
+          <VCardTitle class="text-2xl font-weight-bold"> Bkevent</VCardTitle>
         </VCardItem>
 
         <VDivider />

@@ -2,7 +2,7 @@
      <v-app>
           <!-- Navigation bar with Login button -->
           <v-app-bar app color="indigo" dark>
-               <v-toolbar-title> Event_Booking</v-toolbar-title>
+               <v-toolbar-title> Bkevent</v-toolbar-title>
                <v-spacer />
                <v-btn color="secondary" @click="navigateToLogin">Login</v-btn>
           </v-app-bar>
@@ -11,7 +11,7 @@
           <v-container fluid class="hero">
                <v-row align="center" justify="center" class="fill-height">
                     <v-col class="text-center" cols="12">
-                    <h1 class="display-2 white--text">Welcome to  Event_Booking</h1>
+                    <h1 class="display-2 white--text">Welcome to  Bkevent</h1>
                     <v-btn color="pink" dark large @click="navigateToDashboard">
                     Discover Now
                     </v-btn>
@@ -67,7 +67,7 @@
           <v-footer color="indigo" dark>
                <v-row align="center" justify="center">
                     <v-col cols="12" class="text-center white--text">
-                    &copy; {{ currentYear }}  Event_Booking. All rights reserved.
+                    &copy; {{ currentYear }}  Bkevent. All rights reserved.
                     </v-col>
                </v-row>
           </v-footer>

@@ -1,8 +1,8 @@
-# Smart Event Booking System (SEBS)
+# Smart Event Booking System (Bkevent)
 
 ## 📌 Project Overview
 
-The **Smart Event Booking System (SEBS)** is a full-stack web application built with **Laravel (PHP)** and **Vue.js** that allows users to browse, book, manage, and review various events such as concerts, conferences, and workshops. The system provides role-based features for **Admins**, **Organizers**, and **Regular Users**, supporting event creation, booking management, secure authentication, media uploads, and notification handling.
+The **Smart Event Booking System (Bkevent)** is a full-stack web application built with **Laravel (PHP)** and **Vue.js** that allows users to browse, book, manage, and review various events such as concerts, conferences, and workshops. The system provides role-based features for **Admins**, **Organizers**, and **Regular Users**, supporting event creation, booking management, secure authentication, media uploads, and notification handling.
 
 ---
 

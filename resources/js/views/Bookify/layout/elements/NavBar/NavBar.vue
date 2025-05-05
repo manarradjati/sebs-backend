@@ -61,7 +61,7 @@ const handleNavScroll = throttle(evt => {
           class="app-logo d-flex align-center gap-x-3 app-title-wrapper"
         >
           <img :src="logo_cutted" width="30" height="40">
-          <h1 class="leading-normal" style="font-weight: bold;">Event_Booking</h1>
+          <h1 class="leading-normal" style="font-weight: bold;">Bkevent</h1>
         </RouterLink>
       </slot>
     </div>

@@ -1,6 +1,6 @@
 <template>
      <v-app-bar app color="indigo" dark>
-          <v-toolbar-title> Event_Booking</v-toolbar-title>
+          <v-toolbar-title> Bkevent</v-toolbar-title>
           <v-spacer />
           <v-btn color="secondary" @click="navigateToLogin">Login</v-btn>
      </v-app-bar>

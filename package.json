@@ -1,4 +1,5 @@
 {
+    "name": "Bkevent",
     "private": true,
     "type": "module",
     "scripts": {
